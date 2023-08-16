@@ -25,7 +25,7 @@ function initGame() {
     boxes.forEach((box, index) => {
         box.innerText = "";
         boxes[index].style.pointerEvents = "all";
-        //one more thing is missing, initialise box with css properties again
+       
         box.classList = `box box${index+1}`;
     });
     newGameBtn.classList.remove("active");
@@ -49,7 +49,7 @@ function checkGameOver() {
     let answer = "";
 
     winningPositions.forEach((position) => {
-        //all 3 boxes should be non-empty and exactly same in value
+     
         if( (gameGrid[position[0]] !== "" || gameGrid[position[1]] !== "" || gameGrid[position[2]] !== "") 
             && (gameGrid[position[0]] === gameGrid[position[1]] ) && (gameGrid[position[1]] === gameGrid[position[2]])) {
 
